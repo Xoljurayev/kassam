@@ -12,12 +12,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <script>
-// Old links (#registratsiya, #hamyon) now open their own pages
-(function () { var p = { registratsiya: 'registratsiya.html', hamyon: 'hamyon.html' }[location.hash.slice(1)]; if (p) location.replace(p); })();
+// Old link #registratsiya now opens its own page (Hamyon is not ready yet)
+(function () { var p = { registratsiya: 'registratsiya.html' }[location.hash.slice(1)]; if (p) location.replace(p); })();
 </script>
 <div class="wrap">
   <div class="bar">
@@ -38,11 +38,11 @@
       <span class="card-tx"><b>Registratsiya</b><small>Telefon raqam bilan ro‘yxatdan o‘tish</small><span class="card-meta"><span class="pill k">Video · 1:52</span></span></span>
       <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
     </a>
-    <a class="card" href="hamyon.html">
+    <div class="card off" aria-disabled="true">
       <span class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h11.5v3"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M16 13.5h1.5"/></svg></span>
       <span class="card-tx"><b>Hamyon ochish</b><small>So‘m yoki dollar hamyon qo‘shish</small></span>
-      <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
-    </a>
+      <span class="pill a">Tez orada</span>
+    </div>
   </div>
 </main>
 
