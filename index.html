@@ -6,191 +6,45 @@
 <title>Kassam qo‘llanma</title>
 <meta name="description" content="Kassam ilovasida ro‘yxatdan o‘tish va hamyon ochish bo‘yicha qisqa yo‘riqnoma.">
 <meta property="og:title" content="Kassam qo‘llanma">
-<meta property="og:description" content="Ro‘yxatdan o‘tish va hamyon ochish — qadamma-qadam.">
+<meta property="og:description" content="Kassam ilovasida ro‘yxatdan o‘tish va hamyon ochish bo‘yicha qisqa yo‘riqnoma.">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101512" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232DB06C'/%3E%3Cstop offset='1' stop-color='%234A86E4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ccircle cx='58' cy='50' r='14' fill='%23fff'/%3E%3Ccircle cx='30' cy='30' r='5' fill='%23fff'/%3E%3Ccircle cx='26' cy='50' r='5' fill='%23fff'/%3E%3Ccircle cx='30' cy='70' r='5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
-<style>
-/* Layout: one phone-width column; home = brand + two large pressable cards; each card opens its own step view (hash routing). */
-:root {
-  /* MyKassamDesign — KassamYorug */
-  --bg: #F3F6F4; --surface: #FFFFFF; --ink: #16211C; --ink-soft: #41504A; --muted: #788079;
-  --line: #DCE2DE; --line-strong: #CFD5D1; --soya: 16, 24, 40;
-  --kirim: #1B9E5A; --kirim-light: #E9F6EF; --kirim-yuvosh: #F4FBF6; --kirim-halqa: #82CAA4; --kirim-toq: #0F7C43; --kirim-qirra: #0A5A30;
-  --amber-light: #FFF3D4; --amber-halqa: #F6D27F; --amber-toq: #8A5200;
-  --nofaol-light: #F1F3F5;
-  --belgi-bosh: #2DB06C; --belgi-oxir: #4A86E4;
-  --hero-a: #E9F6EF; --hero-b: #EAF1FC;
-  --f-display: "Unbounded", "Golos Text", system-ui, sans-serif;
-  --f-body: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* KassamTungi */
-    --bg: #101512; --surface: #1A211D; --ink: #E6ECE8; --ink-soft: #C3CCC7; --muted: #8E9993;
-    --line: #2A332E; --line-strong: #3A443F; --soya: 0, 0, 0;
-    --kirim: #34C27A; --kirim-light: #18291F; --kirim-yuvosh: #151E19; --kirim-halqa: #2F8A5C; --kirim-toq: #8FE0B5; --kirim-qirra: #04150C;
-    --amber-light: #2D2513; --amber-halqa: #A8832B; --amber-toq: #FFD98A;
-    --nofaol-light: #232A26;
-    --hero-a: #15241B; --hero-b: #141D2E;
-    color-scheme: dark;
-  }
-}
-
-* { box-sizing: border-box; }
-[hidden] { display: none !important; }
-html, body { margin: 0; }
-body {
-  min-height: 100vh; background: var(--bg); color: var(--ink);
-  font-family: var(--f-body); font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased;
-  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-a { color: var(--kirim-toq); text-underline-offset: 3px; }
-:focus-visible { outline: 2.5px solid var(--belgi-oxir); outline-offset: 3px; border-radius: 8px; }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
-
-.wrap { width: 100%; max-width: 560px; margin: 0 auto; padding-inline: 16px; }
-
-/* Top band */
-.top { background: linear-gradient(150deg, var(--hero-a), var(--hero-b)); border-bottom: 1px solid var(--line); }
-.top .wrap { padding-block: 26px 28px; display: grid; gap: 18px; }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand svg { width: 48px; height: 48px; flex: none; border-radius: 13px; box-shadow: 0 10px 22px -10px rgba(var(--soya), .5); }
-.brand b { font-family: var(--f-display); font-weight: 700; font-size: 1.2rem; }
-.brand span { display: block; font-size: .84rem; color: var(--muted); line-height: 1.2; }
-h1 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(1.7rem, 7vw, 2.3rem); line-height: 1.12; text-wrap: balance; }
-.top p { margin: 0; color: var(--ink-soft); }
-
-/* Home cards */
-.cards { display: grid; gap: 16px; padding-block: 24px 32px; }
-.card {
-  display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--ink);
-  background: linear-gradient(180deg, var(--surface) 45%, var(--kirim-yuvosh));
-  border: 1px solid var(--kirim-halqa); border-radius: 22px; padding: 18px;
-  box-shadow: 0 4px 0 var(--kirim-qirra), 0 22px 28px -18px rgba(var(--soya), .45);
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.card:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--kirim-qirra), 0 12px 18px -14px rgba(var(--soya), .4); }
-.card-ic {
-  flex: none; width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center;
-  background: var(--kirim-light); border: 1px solid var(--kirim-halqa); color: var(--kirim-toq);
-}
-.card-ic svg { width: 28px; height: 28px; }
-.card-tx { flex: 1; min-width: 0; }
-.card-tx b { display: block; font-family: var(--f-display); font-weight: 600; font-size: 1.15rem; line-height: 1.25; }
-.card-tx small { display: block; color: var(--muted); font-size: .9rem; line-height: 1.4; margin-top: 2px; }
-.card-go { flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--kirim); color: #fff; }
-.card-go svg { width: 16px; height: 16px; }
-
-/* Step view */
-.view { padding-block: 18px 36px; }
-.back {
-  display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 600; color: var(--ink-soft);
-  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 12px; padding: 7px 13px 7px 9px;
-}
-.back svg { width: 18px; height: 18px; }
-.view h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.4rem, 6vw, 1.8rem); line-height: 1.2; margin: 18px 0 6px; text-wrap: balance; }
-.view > p { margin: 0 0 14px; color: var(--ink-soft); }
-.view h3 { font-size: 1.05rem; margin: 22px 0 8px; }
-
-ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0 0 16px; display: grid; gap: 10px; }
-ol.steps li {
-  counter-increment: s; position: relative; padding: 12px 14px 12px 54px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 15px; color: var(--ink-soft);
-}
-ol.steps li::before {
-  content: counter(s); position: absolute; left: 13px; top: 12px; width: 28px; height: 28px; border-radius: 50%;
-  display: grid; place-items: center; font-weight: 700; font-size: .88rem;
-  background: var(--kirim-light); color: var(--kirim-toq); box-shadow: 0 0 0 3px var(--kirim-light), 0 0 0 4px var(--kirim-halqa);
-}
-ol.steps strong { color: var(--ink); }
-.btn-name {
-  display: inline-block; font-weight: 600; color: var(--ink); white-space: nowrap;
-  background: var(--nofaol-light); border: 1px solid var(--line-strong); border-radius: 8px; padding: 0 7px; font-size: .92em; line-height: 1.6;
-}
-.note { border-radius: 15px; padding: 12px 14px; margin: 0 0 14px; border: 1px solid; }
-.note b { display: block; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2px; }
-.note.a { background: var(--amber-light); border-color: var(--amber-halqa); color: var(--amber-toq); }
-.note.k { background: var(--kirim-light); border-color: var(--kirim-halqa); color: var(--kirim-toq); }
-
-footer { border-top: 1px solid var(--line); }
-footer .wrap { padding-block: 20px 28px; display: grid; gap: 8px; }
-.tg {
-  justify-self: start; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; color: #fff; font-weight: 600;
-  background: linear-gradient(135deg, var(--belgi-bosh), var(--belgi-oxir)); padding: 10px 16px; border-radius: 14px;
-}
-.tg svg { width: 18px; height: 18px; }
-footer p { margin: 0; color: var(--muted); font-size: .86rem; }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-
-<header class="top">
-  <div class="wrap">
-    <div class="brand">
-      <svg viewBox="0 0 100 100" role="img" aria-label="Kassam belgisi"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DB06C"/><stop offset="1" stop-color="#4A86E4"/></linearGradient></defs><rect width="100" height="100" rx="22" fill="url(#lg)"/><g transform="translate(50 50) scale(0.78) translate(-47.5 -50)"><g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" opacity=".45"><line x1="30.91" y1="18.05" x2="55.37" y2="41.66"/><line x1="20.25" y1="35.79" x2="52.59" y2="46.29"/><line x1="20.25" y1="64.21" x2="52.59" y2="53.71"/><line x1="30.91" y1="81.95" x2="55.37" y2="58.34"/><line x1="39.75" y1="36" x2="53.61" y2="44"/><line x1="36" y1="50" x2="52" y2="50"/><line x1="39.75" y1="64" x2="53.61" y2="56"/></g><g fill="#FFFFFF"><circle cx="30.91" cy="18.05" r="4.6"/><circle cx="20.25" cy="35.79" r="4.6"/><circle cx="20.25" cy="64.21" r="4.6"/><circle cx="30.91" cy="81.95" r="4.6"/><circle cx="39.75" cy="36" r="3.8"/><circle cx="36" cy="50" r="3.8"/><circle cx="39.75" cy="64" r="3.8"/></g><circle cx="64" cy="50" r="19" fill="#FFFFFF" opacity=".25"/><circle cx="64" cy="50" r="13" fill="#FFFFFF"/><path d="M64 44.5 V55.5 M58.5 50 H69.5" stroke="#3C9AA6" stroke-width="3.4" stroke-linecap="round"/></g></svg>
-      <div><b>Kassam</b><span>Og‘iringiz — yengil</span></div>
-    </div>
-    <h1>Kassam qo‘llanma</h1>
-    <p>Kerakli tugmani bosing va qadamlarni ketma-ket bajaring.</p>
+<script>
+// Old links (#registratsiya, #hamyon) now open their own pages
+(function () { var p = { registratsiya: 'registratsiya.html', hamyon: 'hamyon.html' }[location.hash.slice(1)]; if (p) location.replace(p); })();
+</script>
+<div class="wrap">
+  <div class="bar">
+    <a class="brand" href="./"><svg viewBox="0 0 100 100" role="img" aria-label="Kassam belgisi"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DB06C"/><stop offset="1" stop-color="#4A86E4"/></linearGradient></defs><rect width="100" height="100" rx="22" fill="url(#lg)"/><g transform="translate(50 50) scale(0.78) translate(-47.5 -50)"><g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" opacity=".45"><line x1="30.91" y1="18.05" x2="55.37" y2="41.66"/><line x1="20.25" y1="35.79" x2="52.59" y2="46.29"/><line x1="20.25" y1="64.21" x2="52.59" y2="53.71"/><line x1="30.91" y1="81.95" x2="55.37" y2="58.34"/><line x1="39.75" y1="36" x2="53.61" y2="44"/><line x1="36" y1="50" x2="52" y2="50"/><line x1="39.75" y1="64" x2="53.61" y2="56"/></g><g fill="#FFFFFF"><circle cx="30.91" cy="18.05" r="4.6"/><circle cx="20.25" cy="35.79" r="4.6"/><circle cx="20.25" cy="64.21" r="4.6"/><circle cx="30.91" cy="81.95" r="4.6"/><circle cx="39.75" cy="36" r="3.8"/><circle cx="36" cy="50" r="3.8"/><circle cx="39.75" cy="64" r="3.8"/></g><circle cx="64" cy="50" r="19" fill="#FFFFFF" opacity=".25"/><circle cx="64" cy="50" r="13" fill="#FFFFFF"/><path d="M64 44.5 V55.5 M58.5 50 H69.5" stroke="#3C9AA6" stroke-width="3.4" stroke-linecap="round"/></g></svg><span><b>Kassam</b><small>Og‘iringiz — yengil</small></span></a>
+    <span class="pill">Qo‘llanma</span>
   </div>
-</header>
+  <section class="hero">
+    <span class="pill k">Yo‘riqnoma</span>
+    <h1>Kassam qo‘llanma</h1>
+    <p>Kerakli bo‘limni tanlang — video va qadamlar alohida oynada ochiladi.</p>
+  </section>
+</div>
 
 <main class="wrap">
-
-  <!-- Home -->
-  <div class="cards" id="v-home">
-    <a class="card" href="#registratsiya">
+  <div class="cards home-cards">
+    <a class="card" href="registratsiya.html">
       <span class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.6"/><path d="M10.5 18.2h3"/><path d="M9.5 9.8l1.8 1.8 3.4-3.6"/></svg></span>
-      <span class="card-tx"><b>Registratsiya</b><small>Telefon raqam bilan ro‘yxatdan o‘tish</small></span>
-      <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
+      <span class="card-tx"><b>Registratsiya</b><small>Telefon raqam bilan ro‘yxatdan o‘tish</small><span class="card-meta"><span class="pill k">Video · 1:52</span><span class="pill">9 qadam</span></span></span>
+      <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
     </a>
-    <a class="card" href="#hamyon">
+    <a class="card" href="hamyon.html">
       <span class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h11.5v3"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M16 13.5h1.5"/></svg></span>
-      <span class="card-tx"><b>Hamyon ochish</b><small>So‘m yoki dollar hamyon qo‘shish</small></span>
-      <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
+      <span class="card-tx"><b>Hamyon ochish</b><small>So‘m yoki dollar hamyon qo‘shish</small><span class="card-meta"><span class="pill">4 qadam</span></span></span>
+      <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
     </a>
   </div>
-
-  <!-- Registratsiya -->
-  <section class="view" id="v-registratsiya" hidden>
-    <a class="back" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Orqaga</a>
-    <h2>Registratsiya</h2>
-    <p>Ro‘yxatdan o‘tish uchun telefon raqamingiz va Telegram kerak bo‘ladi.</p>
-    <ol class="steps">
-      <li>Kassam’ni oching va <span class="btn-name">Boshlash</span> ni bosing.</li>
-      <li>Telefon raqamingizni kiriting va <span class="btn-name">Davom etish</span> ni bosing.</li>
-      <li>«Kodni qanday olasiz?» oynasida <strong>Telegram bot</strong> ni tanlang.</li>
-      <li><span class="btn-name">Telegramni ochish</span> ni bosing. Botda <strong>Boshlash</strong> (Start) tugmasini bosing.</li>
-      <li>Bot yuborgan 6 xonali kodni Kassam’ga kiriting.</li>
-      <li>Profilingizni to‘ldiring: ism, familiya, tug‘ilgan kun, davlat, viloyat, tuman va manzil.</li>
-      <li>4 xonali <strong>PIN kod</strong> o‘ylab toping, kiriting va yana bir marta kiritib tasdiqlang.</li>
-    </ol>
-    <div class="note a"><b>Diqqat</b>Kassam’ga kiritgan raqamingiz Telegram akkauntingiz raqami bilan bir xil bo‘lishi shart. Aks holda kod kelmaydi.</div>
-    <div class="note k"><b>Tayyor</b>Endi Kassam har ochilganda PIN kodni so‘raydi. Keyingi qadam: hamyon ochish.</div>
-  </section>
-
-  <!-- Hamyon ochish -->
-  <section class="view" id="v-hamyon" hidden>
-    <a class="back" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Orqaga</a>
-    <h2>Hamyon ochish</h2>
-    <p>Hamyon pulingiz turadigan joy: cho‘ntak, bank kartasi yoki do‘kon kassasi. Har biri uchun alohida hamyon oching.</p>
-    <ol class="steps">
-      <li>Bosh sahifada <span class="btn-name">+</span> tugmasini bosing.</li>
-      <li><span class="btn-name">So‘m hamyon qo‘shish</span> yoki <span class="btn-name">Dollar hamyon qo‘shish</span> ni tanlang.</li>
-      <li>Hamyonga nom bering, masalan «Asosiy hamyon» yoki «Uzcard».</li>
-      <li>Saqlang. Hamyon bosh sahifada paydo bo‘ladi.</li>
-    </ol>
-    <h3>Dollar hamyon ochgan bo‘lsangiz</h3>
-    <ol class="steps">
-      <li>Bosh sahifada <span class="btn-name">Kurs kiritish</span> ni bosing.</li>
-      <li>1 dollar necha so‘m ekanini yozing, masalan <strong>12 500</strong>, va <span class="btn-name">Kurs saqlash</span> ni bosing.</li>
-    </ol>
-    <div class="note k"><b>Maslahat</b>Hamyon kartasini bossangiz, uning ichidagi barcha kirim va chiqimlar ochiladi. Yangi kirim yoki chiqimni hamyon ichidagi <span class="btn-name">+</span> tugmasi bilan qo‘shasiz.</div>
-  </section>
-
 </main>
 
 <footer>
@@ -199,24 +53,5 @@ footer p { margin: 0; color: var(--muted); font-size: .86rem; }
     <p>Savolingiz bo‘lsa, kanalga yozing.</p>
   </div>
 </footer>
-
-<script>
-(function () {
-  // Hash routing: "" → home, "#registratsiya" / "#hamyon" → step view
-  var views = { registratsiya: 'v-registratsiya', hamyon: 'v-hamyon' };
-  var home = document.getElementById('v-home');
-  function show() {
-    var key = location.hash.replace('#', '');
-    var target = views[key];
-    home.hidden = !!target;
-    Object.keys(views).forEach(function (k) {
-      document.getElementById(views[k]).hidden = views[k] !== target;
-    });
-    window.scrollTo(0, 0);
-  }
-  window.addEventListener('hashchange', show);
-  show();
-})();
-</script>
 </body>
 </html>
