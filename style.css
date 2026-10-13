@@ -1,4 +1,5 @@
 /* Kassam qo'llanma — MyKassamDesign (same palette, font and card recipes as the Kassam app).
+   Always light: Islom found the dark page ugly (2026-10-13).
    Phone: one column. Desktop (>= 900px): wider page, two-column home. */
 :root {
   /* KassamYorug */
@@ -11,18 +12,6 @@
   --belgi-bosh: #2DB06C; --belgi-oxir: #4A86E4;
   --f: "Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* KassamTungi */
-    --page: #101512; --surface: #1A211D; --ink: #E6ECE8; --ink-soft: #C3CCC7; --nofaol: #9BA59F;
-    --halqa: #3A443F; --nofaol-light: #232A26; --soya: 0, 0, 0;
-    --kirim: #34C27A; --kirim-light: #18291F; --kirim-yuvosh: #151E19; --kirim-halqa: #2F8A5C;
-    --kirim-toq: #8FE0B5; --kirim-chuqur: #1F9459; --kirim-qirra: #04150C;
-    --kok-light: #17223A; --kok-yuvosh: #141A27; --kok-halqa: #3E68AC; --kok-toq: #ABC9FF;
-    --amber-light: #2D2513; --amber-halqa: #A8832B; --amber-toq: #FFD98A;
-    color-scheme: dark;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -177,12 +166,23 @@ ol.steps .shot img {
 footer { border-top: 1px solid var(--halqa); margin-top: 8px; }
 footer .wrap { padding-block: 20px 28px; display: grid; gap: 8px; }
 .tg {
-  justify-self: start; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; color: #fff; font-weight: 700;
+  display: inline-flex; align-items: center; gap: 9px; text-decoration: none; color: #fff; font-weight: 700;
   background: linear-gradient(135deg, var(--belgi-bosh), var(--belgi-oxir)); padding: 10px 16px; border-radius: 14px;
   box-shadow: 0 3px 0 var(--kirim-qirra);
 }
 .tg svg { width: 18px; height: 18px; }
-footer p { margin: 0; color: var(--nofaol); font-size: .86rem; }
+/* Phone: two full-width buttons; wider screens: side by side */
+.links { display: grid; gap: 12px; }
+.links a { justify-content: center; }
+@media (min-width: 600px) { .links { display: flex; flex-wrap: wrap; } }
+/* Secondary button: white with a hard grey edge (SavdoYumshoqTugma style) */
+.adm {
+  display: inline-flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-weight: 700;
+  background: var(--surface); border: 1px solid var(--halqa); padding: 9px 16px; border-radius: 14px;
+  box-shadow: 0 3px 0 var(--halqa);
+}
+.adm svg { width: 18px; height: 18px; color: var(--kirim); }
+.tg:active, .adm:active { transform: translateY(2px); }
 
 /* Desktop */
 @media (hover: hover) {
