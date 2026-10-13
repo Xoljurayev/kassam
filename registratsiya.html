@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <div class="wrap">
@@ -27,7 +27,6 @@
   <figure class="vid">
     <div class="vid-box">
       <video id="v" controls playsinline autoplay preload="auto" poster="video/registratsiya.jpg" src="video/registratsiya.mp4">Brauzeringiz videoni ocha olmadi.</video>
-      <button class="ovoz" id="ovoz" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>Ovozni yoqish</button>
     </div>
     <figcaption class="vid-cap"><span class="pill">Video qo‘llanma · <b>1:52</b></span></figcaption>
   </figure>
@@ -42,17 +41,6 @@
 document.querySelector('.sq').addEventListener('click', function (e) {
   if (document.referrer && document.referrer.indexOf(location.origin) === 0 && history.length > 1) { e.preventDefault(); history.back(); }
 });
-</script>
-<script>
-// Video starts on page open. Browsers may block sound without a tap — then it plays muted and offers a sound button.
-(function () {
-  var v = document.getElementById('v'), b = document.getElementById('ovoz');
-  function unmute() { v.muted = false; b.hidden = true; if (v.paused) v.play(); }
-  b.addEventListener('click', unmute);
-  v.addEventListener('volumechange', function () { if (!v.muted) b.hidden = true; });
-  var p = v.play();
-  if (p && p.catch) p.catch(function () { v.muted = true; v.play().then(function () { b.hidden = false; }, function () {}); });
-})();
 </script>
 </body>
 </html>
