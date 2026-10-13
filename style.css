@@ -44,6 +44,14 @@ a { color: var(--kirim-toq); text-underline-offset: 3px; }
 .pill b { color: var(--ink); font-weight: 800; }
 .pill.k { background: var(--kirim-light); border-color: var(--kirim-halqa); color: var(--kirim-toq); box-shadow: 0 2px 0 var(--kirim-halqa); }
 
+/* Language switch — segmented control like the app's: grey track, active segment lifted */
+.til { flex: none; display: inline-flex; gap: 2px; padding: 3px; border-radius: 13px; background: var(--nofaol-light); border: 1px solid var(--halqa); }
+.til button {
+  font: 700 .84rem var(--f); color: var(--nofaol); background: none; border: 0; border-radius: 10px;
+  padding: 6px 10px; min-width: 38px; cursor: pointer; transition: background .15s ease, color .15s ease;
+}
+.til button[aria-pressed="true"] { background: var(--surface); color: var(--kirim-toq); box-shadow: 0 2px 0 var(--halqa), 0 6px 10px -6px rgba(var(--soya), .35); }
+
 /* Square soft button (SavdoYumshoqTugma) — back */
 .sq {
   flex: none; width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center;
@@ -55,7 +63,7 @@ a { color: var(--kirim-toq); text-underline-offset: 3px; }
 .sq:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--halqa), 0 8px 12px -10px rgba(var(--soya), .3); }
 .bar-title { flex: 1; min-width: 0; }
 .bar-title b { display: block; font-weight: 800; font-size: 1.2rem; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.bar-title small { display: block; color: var(--nofaol); font-size: .82rem; line-height: 1.2; }
+.bar-title small { display: block; color: var(--nofaol); font-size: .82rem; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* Hero card — gradient like the app's balance card (green → white → blue) */
 .hero {

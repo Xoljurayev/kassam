@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uz">
+<html lang="uz" data-title="t_home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <script>
@@ -22,12 +22,12 @@
 <div class="wrap">
   <div class="bar">
     <a class="brand" href="./"><svg viewBox="0 0 100 100" role="img" aria-label="Kassam belgisi"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DB06C"/><stop offset="1" stop-color="#4A86E4"/></linearGradient></defs><rect width="100" height="100" rx="22" fill="url(#lg)"/><g transform="translate(50 50) scale(0.78) translate(-47.5 -50)"><g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" opacity=".45"><line x1="30.91" y1="18.05" x2="55.37" y2="41.66"/><line x1="20.25" y1="35.79" x2="52.59" y2="46.29"/><line x1="20.25" y1="64.21" x2="52.59" y2="53.71"/><line x1="30.91" y1="81.95" x2="55.37" y2="58.34"/><line x1="39.75" y1="36" x2="53.61" y2="44"/><line x1="36" y1="50" x2="52" y2="50"/><line x1="39.75" y1="64" x2="53.61" y2="56"/></g><g fill="#FFFFFF"><circle cx="30.91" cy="18.05" r="4.6"/><circle cx="20.25" cy="35.79" r="4.6"/><circle cx="20.25" cy="64.21" r="4.6"/><circle cx="30.91" cy="81.95" r="4.6"/><circle cx="39.75" cy="36" r="3.8"/><circle cx="36" cy="50" r="3.8"/><circle cx="39.75" cy="64" r="3.8"/></g><circle cx="64" cy="50" r="19" fill="#FFFFFF" opacity=".25"/><circle cx="64" cy="50" r="13" fill="#FFFFFF"/><path d="M64 44.5 V55.5 M58.5 50 H69.5" stroke="#3C9AA6" stroke-width="3.4" stroke-linecap="round"/></g></svg><span><b>Kassam</b></span></a>
-    <span class="pill">Qo‘llanma</span>
+    <div class="til" role="group" aria-label="Til"><button type="button" data-til="uz" aria-pressed="true">O‘z</button><button type="button" data-til="kr" aria-pressed="false">Ўз</button><button type="button" data-til="ru" aria-pressed="false">Ру</button></div>
   </div>
   <section class="hero">
-    <span class="pill k">Yo‘riqnoma</span>
-    <h1>Kassam qo‘llanma</h1>
-    <p>Kerakli bo‘limni tanlang va Kassam’dan foydalanishni oson o‘rganing.</p>
+    <span class="pill k" data-t="yoriq">Yo‘riqnoma</span>
+    <h1 data-t="h1">Kassam qo‘llanma</h1>
+    <p data-t="lead">Kerakli bo‘limni tanlang va Kassam’dan foydalanishni oson o‘rganing.</p>
   </section>
 </div>
 
@@ -35,21 +35,22 @@
   <div class="cards home-cards">
     <a class="card" href="registratsiya.html">
       <span class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.6"/><path d="M10.5 18.2h3"/><path d="M9.5 9.8l1.8 1.8 3.4-3.6"/></svg></span>
-      <span class="card-tx"><b>Registratsiya</b><small>Telefon raqam bilan ro‘yxatdan o‘tish</small><span class="card-meta"><span class="pill k">Video · 1:52</span></span></span>
+      <span class="card-tx"><b data-t="reg">Registratsiya</b><small data-t="reg_sub">Telefon raqam bilan ro‘yxatdan o‘tish</small><span class="card-meta"><span class="pill k" data-t="video">Video · 1:52</span></span></span>
       <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
     </a>
     <div class="card off" aria-disabled="true">
       <span class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h11.5v3"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M16 13.5h1.5"/></svg></span>
-      <span class="card-tx"><b>Hamyon ochish</b><small>So‘m yoki dollar hamyon qo‘shish</small></span>
-      <span class="pill a">Tez orada</span>
+      <span class="card-tx"><b data-t="ham">Hamyon ochish</b><small data-t="ham_sub">So‘m yoki dollar hamyon qo‘shish</small></span>
+      <span class="pill a" data-t="tez">Tez orada</span>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="links"><a class="tg" href="https://t.me/MyKassam" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 3.5 10.6 13.4"/><path d="M21.5 3.5 14.8 21l-4.2-7.6L3 9.3l18.5-5.8Z"/></svg>Telegram kanal</a><a class="adm" href="https://t.me/Smartboy9899" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg>Adminga murojaat</a></div>
+    <div class="links"><a class="tg" href="https://t.me/MyKassam" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 3.5 10.6 13.4"/><path d="M21.5 3.5 14.8 21l-4.2-7.6L3 9.3l18.5-5.8Z"/></svg><span data-t="kanal">Telegram kanal</span></a><a class="adm" href="https://t.me/Smartboy9899" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span data-t="admin">Adminga murojaat</span></a></div>
   </div>
 </footer>
+<script src="til.js?v=1"></script>
 </body>
 </html>
