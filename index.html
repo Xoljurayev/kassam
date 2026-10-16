@@ -16,8 +16,8 @@
 </head>
 <body>
 <script>
-// Old link #registratsiya now opens its own page (Hamyon is not ready yet)
-(function () { var p = { registratsiya: 'registratsiya.html' }[location.hash.slice(1)]; if (p) location.replace(p); })();
+// Old links #registratsiya / #hamyon open their own pages
+(function () { var p = { registratsiya: 'registratsiya.html', hamyon: 'hamyon.html' }[location.hash.slice(1)]; if (p) location.replace(p); })();
 </script>
 <div class="wrap">
   <div class="bar">
@@ -38,11 +38,11 @@
       <span class="card-tx"><b data-t="reg">Registratsiya</b><small data-t="reg_sub">Telefon raqam bilan ro‘yxatdan o‘tish</small><span class="card-meta"><span class="pill k" data-t="video">Video · 1:52</span></span></span>
       <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
     </a>
-    <div class="card off" aria-disabled="true">
+    <a class="card" href="hamyon.html">
       <span class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h11.5v3"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M16 13.5h1.5"/></svg></span>
-      <span class="card-tx"><b data-t="ham">Hamyon ochish</b><small data-t="ham_sub">So‘m yoki dollar hamyon qo‘shish</small></span>
-      <span class="pill a" data-t="tez">Tez orada</span>
-    </div>
+      <span class="card-tx"><b data-t="ham">Hamyon ochish</b><small data-t="ham_sub">So‘m yoki dollar hamyon qo‘shish</small><span class="card-meta"><span class="pill k" data-t="video_h">Video · 1:17</span></span></span>
+      <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
+    </a>
   </div>
 </main>
 
@@ -51,6 +51,6 @@
     <div class="links"><a class="tg" href="https://t.me/MyKassam" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 3.5 10.6 13.4"/><path d="M21.5 3.5 14.8 21l-4.2-7.6L3 9.3l18.5-5.8Z"/></svg><span data-t="kanal">Telegram kanal</span></a><a class="adm" href="https://t.me/Smartboy9899" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span data-t="admin">Adminga murojaat</span></a></div>
   </div>
 </footer>
-<script src="til.js?v=1"></script>
+<script src="til.js?v=2"></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hamyon ochish — Kassam qo‘llanma</title>
-<meta name="description" content="Hamyon ochish bo‘yicha video qo‘llanma — tez orada.">
+<meta name="description" content="Kassam ilovasida hamyon ochish — video qo‘llanma.">
 <meta property="og:title" content="Hamyon ochish — Kassam qo‘llanma">
-<meta property="og:description" content="Hamyon ochish bo‘yicha video qo‘llanma — tez orada.">
+<meta property="og:description" content="Kassam ilovasida hamyon ochish — video qo‘llanma.">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232DB06C'/%3E%3Cstop offset='1' stop-color='%234A86E4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ccircle cx='58' cy='50' r='14' fill='%23fff'/%3E%3Ccircle cx='30' cy='30' r='5' fill='%23fff'/%3E%3Ccircle cx='26' cy='50' r='5' fill='%23fff'/%3E%3Ccircle cx='30' cy='70' r='5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,10 +24,12 @@
 </div>
 
 <main class="wrap page">
-  <section class="tez">
-    <span class="tez-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h11.5v3"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M16 13.5h1.5"/></svg></span>
-    <h1 data-t="tez">Tez orada</h1>
-  </section>
+  <figure class="vid">
+    <div class="vid-box">
+      <video id="v" controls playsinline autoplay preload="auto" poster="video/hamyon.jpg" src="video/hamyon.mp4">Brauzeringiz videoni ocha olmadi.</video>
+    </div>
+    <figcaption class="vid-cap"><span class="pill"><span data-t="vcap">Video qo‘llanma ·</span> <b>1:17</b></span></figcaption>
+  </figure>
 </main>
 
 <footer>
@@ -40,6 +42,6 @@ document.querySelector('.sq').addEventListener('click', function (e) {
   if (document.referrer && document.referrer.indexOf(location.origin) === 0 && history.length > 1) { e.preventDefault(); history.back(); }
 });
 </script>
-<script src="til.js?v=1"></script>
+<script src="til.js?v=2"></script>
 </body>
 </html>

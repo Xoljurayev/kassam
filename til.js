@@ -8,7 +8,7 @@
       yoriq: 'Yo‘riqnoma', h1: 'Kassam qo‘llanma', lead: 'Kerakli bo‘limni tanlang va Kassam’dan foydalanishni oson o‘rganing.',
       reg: 'Registratsiya', reg_sub: 'Telefon raqam bilan ro‘yxatdan o‘tish', reg_bar: 'Ro‘yxatdan o‘tish',
       ham: 'Hamyon ochish', ham_sub: 'So‘m yoki dollar hamyon qo‘shish', ham_bar: 'So‘m yoki dollar hamyon',
-      video: 'Video · 1:52', vcap: 'Video qo‘llanma ·', tez: 'Tez orada',
+      video: 'Video · 1:52', video_h: 'Video · 1:17', vcap: 'Video qo‘llanma ·', tez: 'Tez orada',
       kanal: 'Telegram kanal', admin: 'Adminga murojaat', orqaga: 'Orqaga'
     },
     kr: {
@@ -16,7 +16,7 @@
       yoriq: 'Йўриқнома', h1: 'Kassam қўлланма', lead: 'Керакли бўлимни танланг ва Kassam’дан фойдаланишни осон ўрганинг.',
       reg: 'Регистрация', reg_sub: 'Телефон рақам билан рўйхатдан ўтиш', reg_bar: 'Рўйхатдан ўтиш',
       ham: 'Ҳамён очиш', ham_sub: 'Сўм ёки доллар ҳамён қўшиш', ham_bar: 'Сўм ёки доллар ҳамён',
-      video: 'Видео · 1:52', vcap: 'Видео қўлланма ·', tez: 'Тез орада',
+      video: 'Видео · 1:52', video_h: 'Видео · 1:17', vcap: 'Видео қўлланма ·', tez: 'Тез орада',
       kanal: 'Телеграм канал', admin: 'Админга мурожаат', orqaga: 'Орқага'
     },
     ru: {
@@ -24,7 +24,7 @@
       yoriq: 'Инструкция', h1: 'Руководство Kassam', lead: 'Выберите нужный раздел и легко научитесь пользоваться Kassam.',
       reg: 'Регистрация', reg_sub: 'Регистрация по номеру телефона', reg_bar: 'Как зарегистрироваться',
       ham: 'Открытие кошелька', ham_sub: 'Кошелёк в сумах или долларах', ham_bar: 'Сумы или доллары',
-      video: 'Видео · 1:52', vcap: 'Видеоинструкция ·', tez: 'Скоро',
+      video: 'Видео · 1:52', video_h: 'Видео · 1:17', vcap: 'Видеоинструкция ·', tez: 'Скоро',
       kanal: 'Telegram-канал', admin: 'Написать админу', orqaga: 'Назад'
     }
   };
