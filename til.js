@@ -4,24 +4,24 @@
 (function () {
   var T = {
     uz: {
-      t_home: 'Kassam qo‘llanma', t_reg: 'Registratsiya — Kassam qo‘llanma', t_ham: 'Hamyon ochish — Kassam qo‘llanma',
-      yoriq: 'Yo‘riqnoma', h1: 'Kassam qo‘llanma', lead: 'Kerakli bo‘limni tanlang va Kassam’dan foydalanishni oson o‘rganing.',
+      t_home: 'Dastyor qo‘llanma', t_reg: 'Registratsiya — Dastyor qo‘llanma', t_ham: 'Hamyon ochish — Dastyor qo‘llanma',
+      yoriq: 'Yo‘riqnoma', h1: 'Dastyor qo‘llanma', lead: 'Kerakli bo‘limni tanlang va Dastyor’dan foydalanishni oson o‘rganing.',
       reg: 'Registratsiya', reg_sub: 'Telefon raqam bilan ro‘yxatdan o‘tish', reg_bar: 'Ro‘yxatdan o‘tish',
       ham: 'Hamyon ochish', ham_sub: 'So‘m yoki dollar hamyon qo‘shish', ham_bar: 'So‘m yoki dollar hamyon',
       video: 'Video · 1:52', video_h: 'Video · 1:17', vcap: 'Video qo‘llanma ·', tez: 'Tez orada',
       kanal: 'Telegram kanal', admin: 'Adminga murojaat', orqaga: 'Orqaga'
     },
     kr: {
-      t_home: 'Kassam қўлланма', t_reg: 'Рўйхатдан ўтиш — Kassam қўлланма', t_ham: 'Ҳамён очиш — Kassam қўлланма',
-      yoriq: 'Йўриқнома', h1: 'Kassam қўлланма', lead: 'Керакли бўлимни танланг ва Kassam’дан фойдаланишни осон ўрганинг.',
+      t_home: 'Dastyor қўлланма', t_reg: 'Рўйхатдан ўтиш — Dastyor қўлланма', t_ham: 'Ҳамён очиш — Dastyor қўлланма',
+      yoriq: 'Йўриқнома', h1: 'Dastyor қўлланма', lead: 'Керакли бўлимни танланг ва Dastyor’дан фойдаланишни осон ўрганинг.',
       reg: 'Регистрация', reg_sub: 'Телефон рақам билан рўйхатдан ўтиш', reg_bar: 'Рўйхатдан ўтиш',
       ham: 'Ҳамён очиш', ham_sub: 'Сўм ёки доллар ҳамён қўшиш', ham_bar: 'Сўм ёки доллар ҳамён',
       video: 'Видео · 1:52', video_h: 'Видео · 1:17', vcap: 'Видео қўлланма ·', tez: 'Тез орада',
       kanal: 'Телеграм канал', admin: 'Админга мурожаат', orqaga: 'Орқага'
     },
     ru: {
-      t_home: 'Руководство Kassam', t_reg: 'Регистрация — руководство Kassam', t_ham: 'Открытие кошелька — руководство Kassam',
-      yoriq: 'Инструкция', h1: 'Руководство Kassam', lead: 'Выберите нужный раздел и легко научитесь пользоваться Kassam.',
+      t_home: 'Руководство Dastyor', t_reg: 'Регистрация — руководство Dastyor', t_ham: 'Открытие кошелька — руководство Dastyor',
+      yoriq: 'Инструкция', h1: 'Руководство Dastyor', lead: 'Выберите нужный раздел и легко научитесь пользоваться Dastyor.',
       reg: 'Регистрация', reg_sub: 'Регистрация по номеру телефона', reg_bar: 'Как зарегистрироваться',
       ham: 'Открытие кошелька', ham_sub: 'Кошелёк в сумах или долларах', ham_bar: 'Сумы или доллары',
       video: 'Видео · 1:52', video_h: 'Видео · 1:17', vcap: 'Видеоинструкция ·', tez: 'Скоро',
